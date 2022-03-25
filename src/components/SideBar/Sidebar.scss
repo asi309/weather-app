@@ -1,0 +1,70 @@
+aside.sidebar {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+
+  flex-direction: column;
+  flex: 0.32;
+  justify-content: flex-start;
+
+  width: 32%;
+  max-width: 500px;
+
+  background-color: var(--card-bg);
+
+  overflow-y: auto;
+}
+
+div.sidebar__controls {
+  width: 100%;
+  padding: 0 46px;
+  padding-top: 42px;
+
+  justify-content: space-between;
+
+  button {
+    cursor: pointer;
+
+    border: none;
+    outline: none;
+
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+
+    background-color: var(--btn-color);
+    color: var(--text-color);
+  }
+
+  .sidebar__search-btn {
+    padding: 10px 18px;
+
+    font-family: var(--font-base);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 19px;
+  }
+
+  .sidebar__location-btn {
+    border-radius: 50%;
+
+    height: 40px;
+    width: 40px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  div.sidebar__controls {
+    padding: 0 20px;
+    padding-top: 25px;
+  }
+}
+
+@media screen and (max-width: 780px) {
+  aside.sidebar {
+    bottom: unset;
+    right: 0;
+
+    width: 100%;
+    max-width: unset;
+  }  
+}

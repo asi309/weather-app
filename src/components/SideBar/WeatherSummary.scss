@@ -1,0 +1,162 @@
+div.weather-summary {
+  flex-direction: column;
+
+  width: 100%;
+}
+
+.weather-summary__illustrations {
+  overflow: hidden;
+  width: 100%;
+}
+
+.weather-summary__bg {
+  position: relative;
+  height: 100%;
+
+  margin-left: -25%;
+
+  opacity: 0.1;
+
+  img {
+    height: 100%;
+  }
+}
+
+.weather-summary__icon {
+  position: absolute;
+  top: 109px;
+  left: 129px;
+}
+
+div.weather-summary__info {
+  flex: 1;
+  flex-direction: column;
+  justify-content: space-between;
+
+  width: 100%;
+}
+
+div.weather-summary__info-temperature {
+  align-items: flex-end;
+
+  font-family: var(--font-base);
+  font-size: 144px;
+  line-height: 169px;
+
+  color: var(--text-color);
+
+  margin-top: 10px;
+
+  .weather-summary__info-unit {
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 56.35px;
+    color: var(--secondary-color);
+
+    margin-bottom: 20px;
+  }
+}
+
+div.weather-summary__info-status {
+  font-family: var(--font-base);
+  font-weight: 600;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center;
+
+  color: var(--secondary-color);
+
+  margin: 85px 0;
+}
+
+footer.weather-summary__footer {
+  flex-direction: column;
+  align-items: stretch;
+
+  color: var(--gray-color);
+  font-size: 18px;
+  line-height: 21px;
+
+  width: 100%;
+
+  .date-time {
+    margin-bottom: 30px;
+
+    .today,
+    .seperator-dot {
+      margin-right: 16px;
+    }
+
+    .seperator-dot {
+      width: 5px;
+      height: 5px;
+
+      border-radius: 50%;
+      background-color: var(--gray-color);
+    }
+  }
+
+  .location {
+    p {
+      margin-left: 10px;
+    }
+  }
+}
+
+@media screen and (max-width: 1320px) {
+  .weather-summary__icon {
+    top: 120px;
+    left: 100px;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .weather-summary__bg {
+    width: 100%;
+    margin-left: -10%;
+
+    img {
+      width: 130%;
+      object-fit: cover;
+    }
+  }
+
+  .weather-summary__icon {
+    img {
+      height: 80%;
+      width: 80%;
+    }
+  }
+}
+
+@media screen and (max-width: 1050px) {
+  .weather-summary__icon {
+    top: 100px;
+    left: 80px;
+
+    img {
+      height: 70%;
+      width: 70%;
+    }
+  }
+}
+
+@media screen and (max-width: 920px) {
+  div.weather-summary__info-temperature {
+    font-size: 100px;
+    line-height: 129px;
+
+    .weather-summary__info-unit {
+      font-size: 40px;
+      line-height: 50px;
+
+      margin-bottom: 10px;
+    }
+  }
+
+  div.weather-summary__info-status {
+    margin: 40px 0;
+  }
+}
+
+// @media screen and (max-width: 900px) {

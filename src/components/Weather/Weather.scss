@@ -1,0 +1,90 @@
+div.app__weather {
+  flex-direction: column;
+  flex: 0.68;
+
+  width: 68%;
+
+  margin-left: 32%;
+  padding-top: 42px;
+  padding-right: 90px;
+  padding-left: 130px;
+
+  footer {
+    margin-top: 20px;
+
+    color: var(--secondary-color);
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 17px;
+
+    b {
+      font-weight: 600;
+    }
+  }
+
+  .app__footer-logo {
+    height: 20px;
+    margin-left: 8px;
+    margin-right: 4px;
+
+    img {
+      height: 100%;
+
+      object-fit: cover;
+    }
+  }
+}
+
+.app__weather-controls {
+  display: flex;
+  justify-content: flex-end;
+
+  width: 100%;
+
+  margin-bottom: 66px;
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 40px;
+    width: 40px;
+
+    margin-right: 12px;
+
+    border-radius: 50%;
+
+    border: none;
+    outline: none;
+
+    font-weight: 700;
+    font-size: 18px;
+    line-height: 21px;
+
+    background-color: #585676;
+    color: var(--text-color);
+
+    transition: all 0.3s ease-in-out;
+
+    &:last-of-type {
+      margin-right: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  button.active {
+    background-color: var(--text-color);
+    color: #110e3c;
+  }
+}
+
+@media screen and (max-width: 1420px) {
+  div.app__weather {
+    padding-left: 60px;
+    padding-right: 50px;
+  }
+}
